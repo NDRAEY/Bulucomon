@@ -3,6 +3,7 @@ package widgets;
 import (
 	"github.com/NDRAEY/curses"
 	. "github.com/NDRAEY/Bulucomon/types"
+	"strings"
 )
 
 func SelectBox(screen Screen, title string, values []string) string {

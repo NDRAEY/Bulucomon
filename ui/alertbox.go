@@ -3,6 +3,7 @@ package widgets;
 import (
 	"github.com/NDRAEY/curses"
 	. "github.com/NDRAEY/Bulucomon/types"
+	"strings"
 )
 
 func AlertBox(screen Screen, title, text string, width, height int) {
