@@ -1,4 +1,4 @@
-package widget;
+package widgets;
 
 import (
 	"github.com/NDRAEY/curses"
