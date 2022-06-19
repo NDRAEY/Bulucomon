@@ -21,7 +21,14 @@ func SelectBox(screen Screen, title string, values []string) string {
 	y := (screen.Height-height)/2
 	x := (screen.Width-width)/2
 
-	box := curses.NewWindow(height, width, y, x)
+	titlewnd := curses.NewWindow(3, width, y, x)
+	titlewnd.Border(0,0,0,0,0,0,
+				int(curses.ACS_VLINE()),
+				int(curses.ACS_VLINE()))
+
+	titlewnd.Mvaddstr(1, 1, title)
+
+	box := curses.NewWindow(height-3, width, y+2, x)
 	box.Box(0,0)
 	box.Mvaddstr(1, 1, title)
 
